@@ -10,15 +10,18 @@ session = Session()
 
 Base = declarative_base()
 
-class Trabalhos(Base):
+class Trabalho(Base):
 	__tablename__ = 'trabalhos'
 	id = Column(Integer(), primary_key = True)	
 	titulo = Column(String(255),)
-	instituicao = Column(String(255),)
-	programa = Column(String(255),)
 	autor = Column(String(255),)
-	tipo = Column(String(255),)
 	data = Column(Date())
+	tamanho = Column(String(255),)
+	tipo = Column(String(255),)
+	area = Column(String(255),)
+	instituicao = Column(String(255),)
+	local = Column(String(255),)
+	programa = Column(String(255),)
 	resumo = Column(String(5000),)
 	pavavras_chaves = Column(String(255),)
-	abstract = Column(String(5000),)	
+	abstract = Column(String(5000),)
